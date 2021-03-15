@@ -9,7 +9,13 @@ a basic chat app with Node.js and Socket.io
 * login template
 * Node init
 
+#### v1.0.2
+* tried to code, failed miserably
+
+#### v1.0.3
+* barely working, needs some work
+
 ## Checklist
 - [x] Create a template
-- [ ] Make the damn thing work
-- [ ] Clean up the code
+- [x] Make the damn thing work
+- [ ] Clean it up

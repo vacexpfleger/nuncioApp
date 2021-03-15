@@ -17,10 +17,10 @@ const botName = 'Nuncio';
 io.on('connection', socket => {
     console.log('New connection established');
     
-        socket.emit('message', formatMessage(botName, 'Welcome.'));
+    socket.emit('message', formatMessage(botName, 'Welcome.'));
 
-        //Broadcast when a user connects
-        socket.broadcast.emit('message', formatMessage(botName, 'A user has joined the chat'));
+    //Broadcast when a user connects
+    socket.broadcast.emit('message', formatMessage(botName, 'A user has joined the chat'));
 
     //Runs when client disconnects
     socket.on('disconnect', () => {
@@ -28,7 +28,7 @@ io.on('connection', socket => {
     });
 
     //Listen for chatMessage
-    socket.on('chatMessage', (msg,username) => {
+    socket.on('chatMessage', ({username, msg}) => {
         io.emit('message', formatMessage(username,msg));
     });
 });

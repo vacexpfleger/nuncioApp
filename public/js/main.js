@@ -15,16 +15,17 @@ socket.on('message', message => {
 //Message submit
 chatForm.addEventListener('submit', (e) => {
     e.preventDefault();
+
     //Get message
-    //potrebuji username, text a time v jednom objektu, kvuli absenci v poslednich hodinach nemam naproste poneti jak to udelat
     const username = Qs.parse(location.search, {
         ignoreQueryPrefix: true
     });
+
     const msg = e.target.elements.msg.value;
-    console.log(msg);
-    console.log(username);
+
     //Emit message to server
-    socket.emit('chatMessage', (username,msg));
+    socket.emit('chatMessage', {username: username.username,msg:msg});
+
     //Clear input
     e.target.elements.msg.value = '';
     e.target.elements.msg.focus;
