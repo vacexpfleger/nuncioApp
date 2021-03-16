@@ -15,7 +15,12 @@ a basic chat app with Node.js and Socket.io
 #### v1.0.3
 * barely working, needs some work
 
+#### v1.0.4
+* UI enhancement
+* it works
+* code's fine
+
 ## Checklist
 - [x] Create a template
 - [x] Make the damn thing work
-- [ ] Clean it up
+- [x] Clean it up

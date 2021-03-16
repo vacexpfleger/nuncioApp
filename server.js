@@ -24,12 +24,13 @@ io.on('connection', socket => {
 
     //Runs when client disconnects
     socket.on('disconnect', () => {
-        io.emit('message', formatMessage(botName, 'A user has joined the chat'));
+        io.emit('message', formatMessage(botName, 'A user has left the chat'));
     });
 
     //Listen for chatMessage
     socket.on('chatMessage', ({username, msg}) => {
-        io.emit('message', formatMessage(username,msg));
+        socket.broadcast.emit('message', formatMessage(username,msg), true);
+        socket.emit('message',formatMessage(username,msg), false);
     });
 });
 

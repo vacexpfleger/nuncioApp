@@ -2,21 +2,13 @@
     box-sizing: border-box;
 }
 
-.row {
+.chat {
     border-radius: 5px;
     box-shadow: 10px 10px 30px grey;
 }
 
-.chat-left {
+.chat-messages {
     overflow: auto;
-}
-
-.chat-right {
-    padding-top: 5px;
-    overflow: auto;
-}
-
-.chat, .chat-left, .chat-right {
     min-height: 300px;
     max-height: 500px;
 }
@@ -31,6 +23,14 @@
 
 .contact p {
     margin: 0;
+}
+
+.message-bot {
+    background-color: #62f3fd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0 10px;
+
 }
 
 .message-income {
@@ -57,4 +57,8 @@
 
 .login h2 {
     padding: 10px 0 15px;
+}
+
+#chat-form {
+    box-shadow: 0px -17px 23px -17px rgba(0,0,0,0.51);
 }
